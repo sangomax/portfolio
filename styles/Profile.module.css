@@ -1,0 +1,41 @@
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    flex-grow: 1;
+    background: #184E77;
+    color: #76C893;
+  }
+  .root .gridListTitle{
+    color: #76C893;
+    font-size: 30px;
+    font-family: "Itim";
+    text-decoration: underline;
+    border-top: 30px;
+  }
+  .root .gridPicture {
+    background: #76C893;
+    padding: 5px;
+    border-radius: 25px;
+  }
+  .root .gridProfile {
+    background: #76C893;
+    color: #184E77;
+    border-radius: 25px;
+    display: flex;
+    
+  }
+  .root .gridSkill {
+    background: #76C893;
+    color: #184E77;
+    border-radius: 25px;
+    display: flex;
+    text-align: left;
+  }
+  .root .profileLinks {
+    background: #184E77;
+    color: #76C893;
+    border-radius: 25px;
+    box-shadow: none;
+  }

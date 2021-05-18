@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  flex-grow: 1;
+  background: #184E77;
+  color: #76C893;
+  text-align: center;
+}
+.root .gridListTitle{
+  color: #76C893;
+  font-size: 30px;
+  font-family: "Itim";
+  text-decoration: underline;
+}
+.root .gridListInfo{
+  color: #184E77;
+  font-family: "Itim";
+  text-align: justify;
+  text-indent: 50px;
+  background: #76C893; 
+}
