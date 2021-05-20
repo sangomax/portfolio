@@ -2,7 +2,7 @@ import React from 'react';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Grid from '@material-ui/core/Grid';
 import Head from 'next/head';
-import { CardActions, Container, IconButton, Typography } from '@material-ui/core';
+import { Container, IconButton, Typography } from '@material-ui/core';
 import styles from '/styles/Profile.module.css'
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';

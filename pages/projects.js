@@ -4,10 +4,16 @@ import Grid from '@material-ui/core/Grid';
 import styles from '/styles/ProjectContainer.module.css'
 import { Container } from '@material-ui/core';
 import ProjectContainer from '../comp/ProjectContainer';
-import Card from '@material-ui/core/Card';
 import Head from 'next/head';
+import useFetch from '../comp/useFetch'
+import prjs from '../data/db.json'
+import { theme } from "@material-ui/core/styles";
+
 
 const projects = () => {
+
+  const { data: projects, isPending, error } = useFetch('http://localhost:8000/projects')
+
     return ( 
       <>
         <Head>
@@ -16,19 +22,18 @@ const projects = () => {
         </Head>
         <Container className={styles.root}>
 
-          <Grid container spacing={6}>
+          <Grid container spacing={6} alignItems="center" justify="center">
             <Grid item xs={12} >
               <ListSubheader component="div" className={ styles.gridListTitle } >Projects</ListSubheader>
             </Grid>
-            <Grid item xs={12} sm={6} md={6} key={1}>
-              <ProjectContainer />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} key={2}>
-              <ProjectContainer />
-            </Grid>
-            <Grid item xs={12} sm={6} md={6} key={3}>
-              <ProjectContainer />
-            </Grid>
+            
+            { error && <div>{ error }</div> }
+            { isPending && <div>Loading...</div> }
+            { projects && projects.map((project) => (
+                <Grid item xs={10} sm={5} xs={5} key={project.id} >
+                  <ProjectContainer projectDta={ project }  />
+                </Grid>
+            ))}
           </Grid>
         </Container>
       </>
