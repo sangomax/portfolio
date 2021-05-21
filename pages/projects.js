@@ -19,10 +19,11 @@ const projects = () => {
         <Head>
           <title>Portfolio AGdeO | Projects</title>
           <meta name="keywords" content="portfolio"/>
+          <link rel="icon" href="/logo_green.ico" />
         </Head>
         <Container className={styles.root}>
 
-          <Grid container spacing={6} alignItems="center" justify="center">
+          <Grid container spacing={6} >
             <Grid item xs={12} >
               <ListSubheader component="div" className={ styles.gridListTitle } >Projects</ListSubheader>
             </Grid>
@@ -30,10 +31,11 @@ const projects = () => {
             { error && <div>{ error }</div> }
             { isPending && <div>Loading...</div> }
             { projects && projects.map((project) => (
-                <Grid item xs={10} sm={5} xs={5} key={project.id} >
+                <Grid item xs={12} sm={6} xs={6} key={project.id} >
                   <ProjectContainer projectDta={ project }  />
                 </Grid>
             ))}
+            
           </Grid>
         </Container>
       </>

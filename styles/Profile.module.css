@@ -24,7 +24,8 @@
     color: #184E77;
     border-radius: 25px;
     display: flex;
-    
+    text-align: justify;
+    text-indent: 50px;
   }
   .root .gridSkill {
     background: #76C893;

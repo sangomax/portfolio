@@ -1,5 +1,6 @@
 {
-  "projects": [
+  "projects": 
+  [
     {
       "title": "Trivia Game",
       "subtitle": "Java Group Project",
@@ -9,12 +10,20 @@
       "id": 1
     },
     {
-      "title": "Famus Sport Tour",
-      "subtitle": "Swift Group Project",
+      "title": "Famous Spot Tour",
+      "subtitle": "IOS Group Project",
       "image": "famous_spot_tour.png",
-      "body":"An application that gives tourists suggestions on where to go in Vancouver by Swift, MapKit and Firebase ",
+      "body":"An application that gives tourists suggestions on where to go in Vancouver by Swift, MapKit and Firebase                                                           ",
       "link":"https://github.com/TakayasuNasu/FamousSpotTour",
       "id": 2
+    },
+    {
+      "title": "Personal Portfolio",
+      "subtitle": "Portfolio Website",
+      "image": "portfolio.png",
+      "body":"Personal portfolio website by next.js, react and Material UI",
+      "link":"https://github.com/sangomax/portfolio",
+      "id": 3
     }
   ]
 }

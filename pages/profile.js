@@ -16,6 +16,7 @@ const Profile = () => {
                 <Head>
                     <title>Portfolio AGdeO | Profile</title>
                     <meta name="keywords" content="portfolio"/>
+                    <link rel="icon" href="/logo_green.ico" />
                 </Head>
                 <Container className={ styles.root }>
 
@@ -52,8 +53,8 @@ const Profile = () => {
                             <Grid item xs={10} xl={10}>
                                 <Card className={ styles.gridProfile }>
                                     <CardContent>
-                                        <Typography variant="body2" color="textSecondary" >
-                                            Lorem ipsum dolor sit amet consectetur adipiscing.
+                                        <Typography variant="body1"  >
+                                        I am a Java developer with experience supporting systems in a production environment where I never ran away from problems and challenges before completing and resolving them. I left Brazil to realize a dream of living and working in another country and in turn to continue learning and growing as a developer and person with all challenges show in my way.
                                         </Typography>
                                     </CardContent>
                                 </Card>
