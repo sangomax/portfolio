@@ -89,7 +89,7 @@ const Profile = () => {
                                             IDE
                                         </Typography>
                                         <Typography variant="subtitle1">
-                                            IntelliJ, Eclipse, XCode
+                                            IntelliJ, Eclipse, XCode, PyCharm
                                         </Typography>
                                         <Typography variant="h6" style={{ textDecoration: 'underline' }}>
                                             Other

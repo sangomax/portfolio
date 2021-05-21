@@ -31,7 +31,7 @@ const projects = () => {
             { error && <div>{ error }</div> }
             { isPending && <div>Loading...</div> }
             { projects && projects.map((project) => (
-                <Grid item xs={12} sm={6} xs={6} key={project.id} >
+                <Grid item xs={12} sm={6}  key={project.id} >
                   <ProjectContainer projectDta={ project }  />
                 </Grid>
             ))}
