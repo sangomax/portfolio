@@ -5,21 +5,44 @@ import styles from '/styles/ProjectContainer.module.css'
 import { Container } from '@material-ui/core';
 import ProjectContainer from '../comp/ProjectContainer';
 import Head from 'next/head';
-import useFetch from '../comp/useFetch'
-import prjs from '../data/db.json'
-import { theme } from "@material-ui/core/styles";
+
+const data = 
+  [
+    {
+      "title": "Trivia Game",
+      "subtitle": "Java Group Project",
+      "image": "trivia_game.png",
+      "body":"Trivia is a quiz game which consists of spinning roulette and answer the question related to some topics by Java, HTML, CSS, JavaScript, Spring Boot and Thymeleaf",
+      "link":"https://github.com/sangomax/finalProject",
+      "id": 1
+    },
+    {
+      "title": "Famous Spot Tour",
+      "subtitle": "IOS Group Project",
+      "image": "famous_spot_tour.png",
+      "body":"An application that gives tourists suggestions on where to go in Vancouver by Swift, MapKit and Firebase                                                           ",
+      "link":"https://github.com/TakayasuNasu/FamousSpotTour",
+      "id": 2
+    },
+    {
+      "title": "Personal Portfolio",
+      "subtitle": "Portfolio Website",
+      "image": "portfolio.png",
+      "body":"Personal portfolio website by next.js, react and Material UI",
+      "link":"https://github.com/sangomax/portfolio",
+      "id": 3
+    }
+  ]
 
 
 const projects = () => {
-
-  const { data: projects, isPending, error } = useFetch('http://localhost:8000/projects')
 
     return ( 
       <>
         <Head>
           <title>Portfolio AGdeO | Projects</title>
           <meta name="keywords" content="portfolio"/>
-          <link rel="icon" href="/logo_green.ico" />
+          <link rel="icon" href="/portfolio.ico" />
         </Head>
         <Container className={styles.root}>
 
@@ -28,10 +51,8 @@ const projects = () => {
               <ListSubheader component="div" className={ styles.gridListTitle } >Projects</ListSubheader>
             </Grid>
             
-            { error && <div>{ error }</div> }
-            { isPending && <div>Loading...</div> }
-            { projects && projects.map((project) => (
-                <Grid item xs={12} sm={6}  key={project.id} >
+            { data.map((project) => (
+                <Grid item xs={12} sm={6} key={project.id} >
                   <ProjectContainer projectDta={ project }  />
                 </Grid>
             ))}
@@ -43,51 +64,3 @@ const projects = () => {
 }
  
 export default projects;
-
-
-
-
-
-
-
-
-
-
-// function TitlebarGridList() {
-  
-//     return (
-//       <div className={styles.root}>
-//         <GridList cellHeight={180} className={styles.gridList} spacing={20}>
-//           <GridListTile key="Subheader" cols={2} style={{ height: 'auto' }}>
-//             <ListSubheader component="div" >Projects</ListSubheader>
-//           </GridListTile>
-//           {/* {tileData.map((tile) => ( */}
-//             <GridListTile key={1}>
-//               <img src="/logo_green.png" />
-//               <GridListTileBar
-//                 title={'Title test'}
-//                 subtitle={<span>by: {'Adriano'}</span>}
-//                 actionIcon={
-//                   <IconButton aria-label={`info about ${''}`}>
-//                     <InfoIcon />
-//                   </IconButton>
-//                 }
-//               />
-//             </GridListTile>
-//             <GridListTile key={2}>
-//               <img src="/logo_green.png" />
-//               <GridListTileBar
-//                 title={'Title test'}
-//                 subtitle={<span>by: {'Adriano'}</span>}
-//                 actionIcon={
-//                   <IconButton aria-label={`info about ${''}`} >
-//                     <InfoIcon />
-//                   </IconButton>
-//                 }
-//               />
-//             </GridListTile>
-//           {/* ))} */}
-//         </GridList>
-//       </div>
-//     );
-//   }

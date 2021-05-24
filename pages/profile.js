@@ -16,7 +16,7 @@ const Profile = () => {
                 <Head>
                     <title>Portfolio AGdeO | Profile</title>
                     <meta name="keywords" content="portfolio"/>
-                    <link rel="icon" href="/logo_green.ico" />
+                    <link rel="icon" href="/portfolio.ico" />
                 </Head>
                 <Container className={ styles.root }>
 

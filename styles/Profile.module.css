@@ -4,39 +4,41 @@
     justify-content: space-around;
     overflow: hidden;
     flex-grow: 1;
-    background: #184E77;
-    color: #76C893;
+    background: #e9ecef;
+    color: #0077b6;
   }
   .root .gridListTitle{
-    color: #76C893;
+    color: #0077b6;
     font-size: 30px;
     font-family: "Itim";
     text-decoration: underline;
     border-top: 30px;
   }
   .root .gridPicture {
-    background: #76C893;
+    background: #0077b6;
     padding: 5px;
     border-radius: 25px;
   }
   .root .gridProfile {
-    background: #76C893;
-    color: #184E77;
+    background: #ffffff;
+    color: #0077b6;
     border-radius: 25px;
     display: flex;
     text-align: justify;
     text-indent: 50px;
+    border: 5px solid #0077b6;
   }
   .root .gridSkill {
-    background: #76C893;
-    color: #184E77;
+    background: #ffffff;
+    color: #0077b6;
     border-radius: 25px;
     display: flex;
     text-align: left;
+    border: 5px solid #0077b6;
   }
   .root .profileLinks {
-    background: #184E77;
-    color: #76C893;
+    background: #e9ecef;
+    color: #0077b6;
     border-radius: 25px;
     box-shadow: none;
   }

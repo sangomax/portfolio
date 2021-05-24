@@ -11,20 +11,20 @@ export default function ProjectContainer( { projectDta } ) {
 
     return (
         <div >
-            <Card style={{ background: '#76C893', color: '#184E77', borderRadius: '25px', height: "100%"}} > 
+            <Card className={ styles.card } > 
                 <CardHeader 
                     action={
-                        <IconButton onClick={ () => window.open(projectDta.link) }>
+                        <IconButton onClick={ () => window.open(projectDta.link) } className={ styles.action } >
                             <OpenInNewIcon />
                         </IconButton>
                     }
                     title={ projectDta.title }
-                    subheader={ projectDta.subtitle }
+                    subheader= { <Typography className={ styles.subtitle } > { projectDta.subtitle } </Typography> }
                 />
-                <CardMedia style={{ paddingTop: '65%' }}
+                <CardMedia className={ styles.image }
                     image={ projectDta.image }
                 />
-                <CardContent>
+                <CardContent style={{height:'65px'}}>
                     <Typography variant="body2" color="textSecondary" className={styles.gridListInfo}>
                     { projectDta.body }
                     </Typography>

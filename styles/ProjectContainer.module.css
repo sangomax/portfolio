@@ -4,20 +4,41 @@
   justify-content: space-around;
   overflow: hidden;
   flex-grow: 1;
-  background: #184E77;
-  color: #76C893;
+  background: #e9ecef;
+  color: #0077b6;
   text-align: center;
 }
 .root .gridListTitle{
-  color: #76C893;
+  color: #0077b6;
   font-size: 30px;
   font-family: "Itim";
   text-decoration: underline;
 }
 .root .gridListInfo{
-  color: #184E77;
+  color: #0077b6;
   font-family: "Itim";
   text-align: justify;
   text-indent: 30px;
-  background: #76C893; 
+}
+
+.root .image{
+  border-top: 5px solid #0077b6;
+  border-bottom: 5px solid #0077b6;
+  padding-top: 65%;
+}
+
+.root .card {
+  background: #ffffff;
+  color: #0077b6;
+  border-radius: 25px;
+  border: 5px solid #0077b6;
+}
+
+.root .subtitle {
+  color: white;
+  background-image: radial-gradient(#0077b6 50%, #5cafdb 60%, white 70%);
+}
+
+.root .card .action {
+  color: #0077b6;
 }

@@ -11,11 +11,16 @@ function HomeIcon(props) {
 
 const Navbar = () => {
     return ( 
+      <>
         <nav>
             <Link href="/"><a><HomeIcon fontSize='large' /></a></Link>
             <Link href="/projects"><a>Projects</a></Link>
             <Link href="/profile"><a>Profile</a></Link>
         </nav>
+        <div className="logo">
+
+        </div>
+        </>
      );
 }
  
