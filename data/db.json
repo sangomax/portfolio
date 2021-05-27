@@ -25,5 +25,28 @@
       "link":"https://github.com/sangomax/portfolio",
       "id": 3
     }
+  ],
+  "skills": 
+  [
+    { 
+      "title": "Language",
+      "content": "Java, Swift, Python"
+    },
+    { 
+      "title": "Framework",
+      "content": "Spring Boot, JSF, React, Next.js "
+    },
+    { 
+      "title": "Database",
+      "content": "SQL Server"
+    },
+    { 
+      "title": "IDE",
+      "content": "IntelliJ, Eclipse, XCode, PyCharm"
+    },
+    { 
+      "title": "Other",
+      "content": "Git, Gradle, Maven, Apache Tomcat, EJB"
+    }
   ]
 }

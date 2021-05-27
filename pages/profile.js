@@ -1,7 +1,6 @@
 import React from 'react';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Grid from '@material-ui/core/Grid';
-import Head from 'next/head';
 import { Container, IconButton, Typography } from '@material-ui/core';
 import styles from '/styles/Profile.module.css'
 import Card from '@material-ui/core/Card';
@@ -9,15 +8,15 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import EmailIcon from '@material-ui/icons/Email';
 import GetAppIcon from '@material-ui/icons/GetApp';
+import HeadPortfolio from '../comp/Head';
+import Skills from './skills'
+import SkillsData from '../data/db'
 
 const Profile = () => {
     return ( 
             <> 
-                <Head>
-                    <title>Portfolio AGdeO | Profile</title>
-                    <meta name="keywords" content="portfolio"/>
-                    <link rel="icon" href="/portfolio.ico" />
-                </Head>
+                <HeadPortfolio title="Portfolio AGdeO | Profile" />
+
                 <Container className={ styles.root }>
 
                     <Grid container spacing={3} alignItems="center" justify="center">
@@ -67,36 +66,9 @@ const Profile = () => {
                                             Skill
                                         </Typography>
                                         <br />
-                                        <Typography variant="h6" style={{ textDecoration: 'underline' }}>
-                                            Language
-                                        </Typography>
-                                        <Typography variant="subtitle1">
-                                            Java, Swift, Python
-                                        </Typography>
-                                        <Typography variant="h6" style={{ textDecoration: 'underline' }}>
-                                            Framework
-                                        </Typography>
-                                        <Typography variant="subtitle1">
-                                            Spring Boot, JSF, React, Next.js 
-                                        </Typography>
-                                        <Typography variant="h6" style={{ textDecoration: 'underline' }}>
-                                            Database
-                                        </Typography>
-                                        <Typography variant="subtitle1">
-                                            SQL Server
-                                        </Typography>
-                                        <Typography variant="h6" style={{ textDecoration: 'underline' }}>
-                                            IDE
-                                        </Typography>
-                                        <Typography variant="subtitle1">
-                                            IntelliJ, Eclipse, XCode, PyCharm
-                                        </Typography>
-                                        <Typography variant="h6" style={{ textDecoration: 'underline' }}>
-                                            Other
-                                        </Typography>
-                                        <Typography variant="subtitle1">
-                                            Git, Gradle, Maven, Apache Tomcat, EJB
-                                        </Typography>
+                                        { SkillsData.skills.map( (skill) => (
+                                            <Skills title={skill.title} content={skill.content} />
+                                        ))}
                                         
                                     </CardContent>
                                 </Card>
